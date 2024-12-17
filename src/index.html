@@ -12,28 +12,31 @@
     <main>
       <section class="products">
         <h2>Listado de camisetas</h2>
-        <div class="products__container1">
-          <img src="./images/node-js.jpg" class="products__img1" alt="imagen camiseta Node JS">
-          <h2>Node JS</h2>
-          <p>16€</p>
-          <button class="js_btnPickUp1 products__btnPickUp1">Añadir a la cesta</button>
+        <div class="products__box">
+          <div class="products__container1">
+            <img src="./images/node-js.jpg" class="products__img1" alt="imagen camiseta Node JS">
+            <h2>Node JS</h2>
+            <p>16€</p>
+            <button class="js_btnPickUp1 products__btnPickUp1">Añadir a la cesta</button>
+          </div>
+          <div class="products__container1">
+            <img src="./images/javascript.jpg" class="products__img1" alt="imagen camiseta JavaScript">
+            <h2>JavaScript</h2>
+            <p>15€</p>
+            <button class="js_btnPickUp2 products__btnPickUp2">Añadir a la cesta</button>
+          </div>
+          <div class="products__container1">
+            <img src="./images/react.jpg" class="products__img1" alt="imagen camiseta React JS">
+            <h2>React JS</h2>
+            <p>13€</p>
+            <button class="js_btnPickUp3 products__btnPickUp3">Añadir a la cesta</button>
+          </div>
         </div>
-        <div class="products__container1">
-          <img src="./images/javascript.jpg" class="products__img1" alt="imagen camiseta JavaScript">
-          <h2>JavaScript</h2>
-          <p>15€</p>
-          <button class="js_btnPickUp2 products__btnPickUp2">Añadir a la cesta</button>
-        </div>
-        <div class="products__container1">
-          <img src="./images/react.jpg" class="products__img1" alt="imagen camiseta React JS">
-          <h2>React JS</h2>
-          <p>13€</p>
-          <button class="js_btnPickUp3 products__btnPickUp3">Añadir a la cesta</button>
-        </div>
-      
-      
+      </section>
+
+      <section class="shop">
         <h2>Cesta de la compra</h2>
-        <table>
+        <table class="shop__table">
           <tr>
             <th>Producto</th>
             <th>Precio</th>
@@ -43,40 +46,43 @@
           <tr>
             <td>Node JS</td>
             <td>16</td>
-            <td><button>-</button><p></p><button>+</button></td>
+            <td><button class="js_btnLess1 shop__btnLess1">-</button><p class="js_productsNumber1"></p><button class="js_btnLess1 shop__btnMore1">+</button></td>
             <td></td>
           </tr>
           <tr>
             <td>JavaScript</td>
             <td>13</td>
-            <td><button>-</button><p></p><button>+</button></td>
+            <td><button class="js_btnLess1 shop__btnLess2">-</button><p class="js_productsNumber2"></p><button class="js_btnLess1 shop__btnMore2">+</button></td>
             <td></td>
           </tr>
           <tr>
             <td>React JS</td>
             <td>16</td>
-            <td><button>-</button><p></p><button>+</button></td>
+            <td><button class="js_btnLess1 shop__btnLess3">-</button><p class="js_productsNumber3"></p><button class="js_btnLess1 shop__btnMore3">+</button></td>
             <td></td>
           </tr>      
           <tr>
-            <td colspan="3">Total</td>
+            <td>Total</td>
+            <td></td>
+            <td></td>
+            <td></td>
           </tr>    
         </table>
-      </section>
-      <section>
+      
+      
         <h2>¿Dónde te lo enviamos?</h2>
-        <form action="">
+        <form class="shop__container">
           <div>
             <label for="adress">Dirección</label>
-            <input type="text" id="adress" class="js_adress" name="adress" required />
+            <input type="text" id="adress" class="js_adress shop___adress" name="adress" required />
           </div>
           <div>
             <label for="city">Ciudad</label>
-            <input type="text" id="city" class="js_city" name="city"  required />
+            <input type="text" id="city" class="js_city shop___city" name="city"  required />
           </div>
           <div>
             <label for="cp">Código postal</label>
-            <input type="number" id="cp" class="js_cp" name="cp" required />
+            <input type="number" id="cp" class="js_cp shop___cp" name="cp" required />
           </div>
         </form>
       </section>
