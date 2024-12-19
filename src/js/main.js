@@ -39,120 +39,69 @@ let total = 0;
 function countMore(productIndex, productAmountElement) {
   productsShoppingCart[productIndex].count += 1;
   productAmountElement.innerHTML = productsShoppingCart[productIndex].count;
+  updateTotals();
 }
 function countLess(productIndex, productAmountElement) {
   if(productsShoppingCart[productIndex].count > 0){
   productsShoppingCart[productIndex].count = productsShoppingCart[productIndex].count - 1;
   productAmountElement.innerHTML = productsShoppingCart[productIndex].count;
+  updateTotals();
 }}
 
 function mult(productIndex){
-  if(productsShoppingCart[productIndex].count >= 0){
-  const mult = productsShoppingCart[productIndex].count * productsShoppingCart[productIndex].price;
-  return mult};
-}
+  return productsShoppingCart[productIndex].count * productsShoppingCart[productIndex].price;
+  };
 
-function sumTotal(productIndex, counter){
-  const sumPrice = counter + productsShoppingCart[productIndex].price;
-  return sumPrice;
-}
+function updateTotals(){
 
-function lessTotal(productIndex, counter){
-  const lessPrice = counter - productsShoppingCart[productIndex].price;
-  return lessPrice;
+  const totalValue1 = mult(0);
+  const totalValue2 = mult(1);
+  const totalValue3 = mult(2);
+
+  total1.innerHTML = totalValue1;
+  total2.innerHTML = totalValue2;
+  total3.innerHTML = totalValue3;
+
+  const finalSum = totalValue1 + totalValue2 + totalValue3;
+  finalTotal.innerHTML = finalSum;
 }
 
 /*Eventos*/
       
 btnPickUp1.addEventListener("click", (ev) => {
   countMore(0, productAmount1);
-  const mult1 = mult(0);
-  total1.innerHTML = mult1;
-  total += mult1;
-  finalTotal.innerHTML = total;
-});
+  });
 
                            
 btnPickUp2.addEventListener("click", (ev) => {
-  countMore(1, productAmount2);
-  const mult2 = mult(1);
-  total2.innerHTML = mult2;
-  total += mult2;
-  finalTotal.innerHTML = total;
+  countMore(1, productAmount2);  
 });
 
 btnPickUp3.addEventListener("click", (ev) => {
-  countMore(2, productAmount3);
-  const mult3 = mult(2);
-  total3.innerHTML = mult3;
-  total += mult3;
-  finalTotal.innerHTML = total;
+  countMore(2, productAmount3);  
 });
 
 btnMore1.addEventListener("click", (ev) => {
   countMore(0, productAmount1);
-  const mult1 = mult(0);
-  total1.innerHTML = mult1;
-  total += mult1;
-  finalTotal.innerHTML = total;
-}); 
+  }); 
 
 btnMore2.addEventListener("click", (ev) => {
   countMore(1, productAmount2);
-  const mult2 = mult(1);
-  total2.innerHTML = mult2;
-  total += mult2;
-  finalTotal.innerHTML = total;
-});
+  });
 
 btnMore3.addEventListener("click", (ev) => {
   countMore(2, productAmount3);
-  const mult3 = mult(2);
-  total3.innerHTML = mult3;
-  total += mult3;
-  finalTotal.innerHTML = total;
-});
+  });
 
 btnLess1.addEventListener("click", (ev) => {
   countLess(0, productAmount1);
-  const mult1 = mult(0);
-  total1.innerHTML = mult1;
-  total = lessTotal(0, total);
-  finalTotal.innerHTML = total;
-});
+  });
 
 btnLess2.addEventListener("click", (ev) => {
-  countLess(1, productAmount2);
-  const mult2 = mult(1);
-  total2.innerHTML = mult2;
-  total += mult2;
-  finalTotal.innerHTML = total;
+  countLess(1, productAmount2);  
 });
 
 btnLess3.addEventListener("click", (ev) => {
-  countLess(2, productAmount3);
-  const mult3 = mult(2);
-  total3.innerHTML = mult3;
-  total += mult3;
-  finalTotal.innerHTML = total;
+  countLess(2, productAmount3);  
   });
 
-/*Procesos*/
-
-
-/*if(total1.value > 0 || total2.value > 0 || total3.value > 0){
-  let sum =  total1.value + total2.value + total3.value;
-  
-}
-
-if(parseInt(productAmount1.value) > 0){
-  let mult = price1.value * parseInt(productAmount1.value);
-  total1.innerHTML = mult;
-}*/
-
-/*OJO: VER PORQUÉ ESTA FUNCIÓN NO PUEDE USARSE. Sólo sirve una vez. 
-function countMore(countProduct, productAmount) {
-  countProduct += 1;
-  productAmount.innerHTML= countProduct;
-  
-}*/
