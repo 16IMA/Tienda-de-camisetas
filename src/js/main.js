@@ -27,7 +27,7 @@ const finalTotal = document.querySelector(".js_finalTtotal");
 const productsShoppingCart = [
   {name:"Node JS", price: 16, count:0},
   {name:"JavaScript", price: 13, count:0},
-  {name:"React JS", price: 16, count:0}
+  {name:"React JS", price: 15, count:0}
 ]
 
 /*Contadores*/
